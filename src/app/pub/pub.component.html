@@ -1,0 +1,66 @@
+<div fxLayout="row" fxLayoutAlign="end center">
+    <button routerLink="/create" mat-raised-button color="primary">Create</button>
+  </div>
+  
+  <!-- Search Filter Input -->
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search articles">
+    </mat-form-field>
+  </div>
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Titre Column -->
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+  
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.date | date}} </td>
+    </ng-container>
+  
+    <!-- Lien Column -->
+    <ng-container matColumnDef="lien">
+      <th mat-header-cell *matHeaderCellDef> Link </th>
+      <td mat-cell *matCellDef="let element"> <a [href]="element.lien" target="_blank">{{element.lien}}</a> </td>
+    </ng-container>
+  
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+  
+    <!-- Source PDF Column -->
+    <ng-container matColumnDef="sourcepdf">
+      <th mat-header-cell *matHeaderCellDef> Source PDF </th>
+      <td mat-cell *matCellDef="let element"> <a [href]="element.sourcepdf" target="_blank">{{element.sourcepdf}}</a> </td>
+    </ng-container>
+  
+    <!-- CRUD Actions Column -->
+    <ng-container matColumnDef="crud">
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <button routerLink="/articles/{{element.id}}/edit">
+          <mat-icon aria-hidden="false" aria-label="Edit">edit</mat-icon>
+        </button>
+        
+      </td>
+    </ng-container>
+  
+    <!-- Header and Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>

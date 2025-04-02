@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Event Details</h2>
+
+<mat-dialog-content *ngIf="EventAffiche">
+  <p><strong>Title:</strong> {{EventAffiche.title}}</p>
+  
+  <p><strong>Start Date:</strong> {{EventAffiche.dateDebut | date}}</p>
+  
+  <p><strong>End Date:</strong> {{EventAffiche.dateFin | date}}</p>
+  
+  <p><strong>Location:</strong> {{EventAffiche.Lieu}}</p>
+  
+  <!-- Add other event properties as needed -->
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="!EventAffiche">
+  <p>Loading event details...</p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  
+</mat-dialog-actions>

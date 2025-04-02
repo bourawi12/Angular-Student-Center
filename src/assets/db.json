@@ -1,0 +1,93 @@
+{
+  "members": [
+    {
+      "id": null,
+      "cin": "177",
+      "name": "sd",
+      "type": "sds",
+      "created_at": "2/5"
+    },
+    {
+      "id": "99c2",
+      "cin": "169",
+      "name": "sdsd5555",
+      "type": "szs2",
+      "created_at": "06/06"
+    },
+    {
+      "id": "fc80",
+      "cin": "155",
+      "name": "sds",
+      "type": "sds",
+      "created_at": "06/06"
+    },
+    {
+      "id": "33ab",
+      "cin": "1287",
+      "name": "mohamed288",
+      "type": "mohamd568",
+      "created_at": "0/66"
+    }
+  ],
+  "Evt": [
+    {
+      "title": "math",
+      "dateDebut": "2025-05-06T23:00:00.000Z",
+      "dateFin": "2025-05-08T23:00:00.000Z",
+      "Lieu": "New York, NYsd",
+      "id": "c548"
+    },
+    {
+      "title": "Book Fair",
+      "dateDebut": "2025-07-10T09:00:00Z",
+      "dateFin": "2025-07-12T18:00:00Z",
+      "Lieu": "London, UK",
+      "id": "c596"
+    },
+    {
+      "title": "Science Symposium",
+      "dateDebut": "2025-08-25T09:00:00Z",
+      "dateFin": "2025-08-28T17:00:00Z",
+      "Lieu": "Berlin, Germany",
+      "id": "c752"
+    },
+    {
+      "id": "33dc",
+      "title": null,
+      "dateDebut": "44",
+      "dateFin": "55",
+      "Lieu": "d"
+    },
+    {
+      "id": "919c",
+      "title": null,
+      "dateDebut": "77",
+      "dateFin": "77",
+      "Lieu": "sd"
+    },
+    {
+      "id": "4ee8",
+      "title": null,
+      "dateDebut": "77",
+      "dateFin": "77",
+      "Lieu": "ze"
+    },
+    {
+      "id": "e662",
+      "title": "title1",
+      "dateDebut": "55",
+      "dateFin": "55",
+      "Lieu": "sd"
+    }
+  ],
+  "Pub": [
+    {
+      "id": "111",
+      "type": "string",
+      "Titre": "string",
+      "lien": "string",
+      "Date": "02/10/2002",
+      "sourcepdf": "string"
+    }
+  ]
+}

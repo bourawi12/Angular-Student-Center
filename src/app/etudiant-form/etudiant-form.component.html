@@ -16,6 +16,16 @@
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
+   
+    <mat-form-field appearance="fill">
+        <mat-label>Groupe</mat-label>
+        <mat-select formControlName="groupeId">
+            <mat-option *ngFor="let groupe of groupes" [value]="groupe.id">
+                {{groupe.nom}} - {{groupe.niveau}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
     <mat-form-field appearance="fill">
         <mat-label>Téléphone</mat-label>
         <input matInput formControlName="telephone" placeholder="Entrez le numéro de téléphone">

@@ -127,28 +127,12 @@
       "dateInscription": "2023-09-01"
     },
     {
-      "id": "ETU003",
-      "nom": "Bernard",
-      "prenom": "Lucas",
-      "dateNaissance": "2000-11-30",
-      "email": "lucas.bernard@email.com",
-      "telephone": "23456789",
-      "adresse": "789 Boulevard du Savoir",
-      "niveau": "1ère année",
-      "specialite": "Développement Web",
-      "groupeId": "GRP003",
-      "coursInscrits": [
-        "COURS001",
-        "COURS003"
-      ],
-      "dateInscription": "2024-01-15"
-    },
-    {
       "id": "61d2",
       "nom": "bouaziz",
       "prenom": "mohamed",
       "dateNaissance": "2025-03-31T23:00:00.000Z",
-      "telephone": "56449590"
+      "telephone": "5644959",
+      "groupeId": "GRP001"
     },
     {
       "id": "9784",
@@ -156,6 +140,26 @@
       "prenom": "mohamed",
       "dateNaissance": "2016-07-14T23:00:00.000Z",
       "telephone": "56449590"
+    }
+  ],
+  "groupes": [
+    {
+      "id": "GRP001",
+      "nom": "Groupe 1",
+      "niveau": "3ème année",
+      "specialite": "Informatique"
+    },
+    {
+      "id": "GRP002",
+      "nom": "Groupe 2",
+      "niveau": "2ème année",
+      "specialite": "Réseaux"
+    },
+    {
+      "id": "GRP003",
+      "nom": "Groupe 3",
+      "niveau": "1ère année",
+      "specialite": "Développement Web"
     }
   ]
 }

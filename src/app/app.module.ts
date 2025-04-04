@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { TemplateComponent } from './template/template.component';
-
+import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
@@ -82,6 +82,7 @@ import { GroupeComponent } from './groupe/groupe.component';
     MatDatepickerModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    MatSelectModule,
   
   ],
   providers: [],

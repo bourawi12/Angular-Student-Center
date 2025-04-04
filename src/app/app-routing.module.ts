@@ -8,6 +8,7 @@ import { PubComponent } from './pub/pub.component';
 import { LoginComponent } from './login/login.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
+import { GroupeComponent } from './groupe/groupe.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -41,6 +42,9 @@ const routes: Routes = [
   },
   { path: 'create-etudiant', component: EtudiantFormComponent },
   { path: 'edit-etudiant/:id', component: EtudiantFormComponent },
+  { path: 'groupes', component: GroupeComponent },
+  // { path: 'create-groupe', component: GroupeFormComponent },
+  // { path: 'edit-groupe/:id', component: GroupeFormComponent }
   {
     path:'**',// nimporte quel path
     component:MemberComponent

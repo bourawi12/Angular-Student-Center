@@ -1,40 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { MemberService } from 'src/Service/member.service';
-import {Member} from 'src/Modeles/Member';
+import { EtudiantService } from 'src/Service/etudiant.service';
+
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Etudiant } from 'src/Modeles/Etudiant';
 
 @Component({
-  selector: 'app-member',
-  templateUrl: './member.component.html',
-  styleUrls: ['./member.component.css']
+  selector: 'app-etudiant',
+  templateUrl: './etudiant.component.html',
+  styleUrls: ['./etudiant.component.css']
 })
-export class MemberComponent implements OnInit {
-  dataSource:Member[] = [
+export class EtudiantComponent implements OnInit {
+  dataSource:Etudiant[] = [
     
   ];
-  //appeler le service MemberService
+  //appeler le service EtudiantService
   //injection de dependances : mecanisme permet de injecter le service dans un composant
   //Service dans le composant
-  constructor(private MS:MemberService,private dialog:MatDialog){
+  constructor(private ES:EtudiantService,private dialog:MatDialog){
     
   } 
   //nkhaliw lcode fel ngOnInit moouch fel constructor bech yetloadi asra3 
   ngOnInit(): void {
-    this.MS.GetAllMembers().subscribe((a)=>{
+    this.ES.GetAllEtudiants().subscribe((a)=>{
       this.dataSource=a
     })
 }
 
 
-  displayedColumns: string[] = ['id', 'cin', 'name', 'type', 'created_at', 'edit&delete'];
+  displayedColumns: string[] = ['id', 'nom','prenom','dateNaissance', 'telephone','groupe', 'date_inscription', 'edit&delete'];
 
   // Edit element function
   editElement(element: any) {
     console.log('Edit', element);
   }
 
-  deleteElement(element: Member) {
+  deleteElement(element: Etudiant) {
 
     let dialogRef = this.dialog.open(ConfirmDialogComponent, {
       height: '200px',
@@ -46,14 +47,14 @@ export class MemberComponent implements OnInit {
         const id = element.id; // Convert id to a number (if necessary)
         
         // Call the service to delete the element
-        this.MS.deleteElement(id).subscribe(
+        this.ES.deleteElement(id).subscribe(
           () => {
             // Update the dataSource by filtering out the deleted element
-            this.dataSource = this.dataSource.filter(member => member.id !== id);
-            console.log('Deleted member with id', id);
+            this.dataSource = this.dataSource.filter(etudiant => etudiant.id !== id);
+            console.log('Deleted etudiant with id', id);
           },
           (error) => {
-            console.error('Error deleting member:', error);
+            console.error('Error deleting etudiant:', error);
           }
         );
       }
@@ -61,15 +62,13 @@ export class MemberComponent implements OnInit {
 
     
   }
-  // Add new member function
-  addMember(newMember: Member) {
-    this.MS.addMember(newMember).subscribe((createdMember) => {
-      this.dataSource.push(createdMember);
+  // Add new etudiant function
+  addEtudiant(newEtudiant: Etudiant) {
+    this.ES.addEtudiant(newEtudiant).subscribe((createdEtudiant) => {
+      this.dataSource.push(createdEtudiant);
       this.dataSource = [...this.dataSource]; // Update the dataSource
-      console.log('Added member', createdMember);
+      console.log('Added etudiant', createdEtudiant);
     });
   
   
-}
-
-}
+}}

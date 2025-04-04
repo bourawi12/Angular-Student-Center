@@ -89,5 +89,73 @@
       "Date": "02/10/2002",
       "sourcepdf": "string"
     }
+  ],
+  "Etudiant": [
+    {
+      "id": "ETU001",
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "dateNaissance": "1998-05-15",
+      "email": "jean.dupont@email.com",
+      "telephone": "12345678",
+      "adresse": "123 Rue de l'École",
+      "niveau": "3ème année",
+      "specialite": "Informatique",
+      "groupeId": "GRP001",
+      "coursInscrits": [
+        "COURS001",
+        "COURS002",
+        "COURS003"
+      ],
+      "dateInscription": "2023-09-01"
+    },
+    {
+      "id": "ETU002",
+      "nom": "Martin",
+      "prenom": "Marie",
+      "dateNaissance": "1999-03-21",
+      "email": "marie.martin@email.com",
+      "telephone": "87654321",
+      "adresse": "456 Avenue des Sciences",
+      "niveau": "2ème année",
+      "specialite": "Réseaux",
+      "groupeId": "GRP002",
+      "coursInscrits": [
+        "COURS002",
+        "COURS004"
+      ],
+      "dateInscription": "2023-09-01"
+    },
+    {
+      "id": "ETU003",
+      "nom": "Bernard",
+      "prenom": "Lucas",
+      "dateNaissance": "2000-11-30",
+      "email": "lucas.bernard@email.com",
+      "telephone": "23456789",
+      "adresse": "789 Boulevard du Savoir",
+      "niveau": "1ère année",
+      "specialite": "Développement Web",
+      "groupeId": "GRP003",
+      "coursInscrits": [
+        "COURS001",
+        "COURS003"
+      ],
+      "dateInscription": "2024-01-15"
+    },
+    {
+      "id": "61d2",
+      "nom": "bouaziz",
+      "prenom": "mohamed",
+      "dateNaissance": "2025-03-31T23:00:00.000Z",
+      "telephone": "56449590"
+    },
+    {
+      "id": "9784",
+      "nom": "bouaziz",
+      "prenom": "mohamed",
+      "dateNaissance": "2016-07-14T23:00:00.000Z",
+      "telephone": "56449590"
+    }
   ]
 }

@@ -34,6 +34,9 @@ import { firebaseConfig } from './environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import { LoginComponent } from './login/login.component';
+import { EtudiantComponent } from './etudiant/etudiant.component';
+import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
+import { GroupeComponent } from './groupe/groupe.component';
 
 
 
@@ -51,7 +54,10 @@ import { LoginComponent } from './login/login.component';
     VisibilityComponent,
     PubComponent,
     EditPubComponent,
-    LoginComponent
+    LoginComponent,
+    EtudiantComponent,
+    EtudiantFormComponent,
+    GroupeComponent
   ],
   imports: [
     BrowserModule,

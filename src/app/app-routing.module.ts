@@ -6,11 +6,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EventComponent } from './event/event.component';
 import { PubComponent } from './pub/pub.component';
 import { LoginComponent } from './login/login.component';
+import { EtudiantComponent } from './etudiant/etudiant.component';
+import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'member', component: MemberComponent },
-  //{ path: 'tools', component: ToolsComponent },
+  { path: 'etudiant', component: EtudiantComponent },
   { path: 'articles', component: PubComponent },
   { path: 'events', component: EventComponent },
   {
@@ -19,21 +21,26 @@ const routes: Routes = [
     component:LoginComponent
   },
   {
-    path:'members',
+    path:'etudiant',
     pathMatch:'full',
-    component:MemberComponent
+    component:EtudiantComponent
   },
   {
     path:'create',
     pathMatch:'full',
     component:MemberFromComponent
+  }, {
+    path:'create-etudiant',
+    pathMatch:'full',
+    component:EtudiantFormComponent
   },
   {
     path:'edit/:id',
     pathMatch:'full',
     component:MemberFromComponent
   },
-  
+  { path: 'create-etudiant', component: EtudiantFormComponent },
+  { path: 'edit-etudiant/:id', component: EtudiantFormComponent },
   {
     path:'**',// nimporte quel path
     component:MemberComponent

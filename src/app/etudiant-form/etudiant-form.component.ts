@@ -57,11 +57,11 @@ export class EtudiantFormComponent implements OnInit {
           ...this.form.value
         };
         this.etudiantService.editEtudiant(updatedEtudiant).subscribe(() => {
-          this.router.navigate(['/etudiants']);
+          this.router.navigate(['/etudiant']);
         });
       } else {
         this.etudiantService.addEtudiant(this.form.value).subscribe(() => {
-          this.router.navigate(['/etudiants']);
+          this.router.navigate(['/etudiant']);
         });
       }
     }

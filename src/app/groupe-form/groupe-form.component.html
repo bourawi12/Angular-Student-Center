@@ -1,0 +1,52 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="groupe-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Nom du groupe</mat-label>
+        <input matInput formControlName="nom" placeholder="Entrez le nom du groupe">
+        <mat-error *ngIf="form.get('nom')?.hasError('required')">
+            Le nom est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Niveau</mat-label>
+        <mat-select formControlName="niveau">
+            <mat-option value="1ère année">1ère année</mat-option>
+            <mat-option value="2ème année">2ème année</mat-option>
+            <mat-option value="3ème année">3ème année</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Spécialité</mat-label>
+        <input matInput formControlName="specialite" placeholder="Entrez la spécialité">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Année Scolaire</mat-label>
+        <input matInput formControlName="anneeScolaire" placeholder="Ex: 2024-2025">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Professeur Principal</mat-label>
+        <mat-select formControlName="professeurPrincipal">
+            <mat-option *ngFor="let prof of professeurs" [value]="prof.id">
+                {{prof.nom}} {{prof.prenom}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Capacité Maximum</mat-label>
+        <input matInput type="number" formControlName="capaciteMax" placeholder="Nombre d'étudiants max">
+        <mat-error *ngIf="form.get('capaciteMax')?.hasError('required')">
+            La capacité est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" >
+            {{isEditMode ? 'Modifier' : 'Créer'}}
+        </button>
+        <button mat-button type="button" routerLink="/groupes">Annuler</button>
+    </div>
+</form>

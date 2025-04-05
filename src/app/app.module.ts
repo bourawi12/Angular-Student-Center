@@ -37,6 +37,7 @@ import { LoginComponent } from './login/login.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 import { GroupeComponent } from './groupe/groupe.component';
+import { GroupeFormComponent } from './groupe-form/groupe-form.component';
 
 
 
@@ -57,7 +58,8 @@ import { GroupeComponent } from './groupe/groupe.component';
     LoginComponent,
     EtudiantComponent,
     EtudiantFormComponent,
-    GroupeComponent
+    GroupeComponent,
+    GroupeFormComponent
   ],
   imports: [
     BrowserModule,

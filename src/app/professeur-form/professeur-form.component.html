@@ -1,0 +1,82 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="professeur-form">
+    <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="nom" placeholder="Entrez le nom">
+        <mat-error *ngIf="form.get('nom')?.hasError('required')">
+            Le nom est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Prénom</mat-label>
+        <input matInput formControlName="prenom" placeholder="Entrez le prénom">
+        <mat-error *ngIf="form.get('prenom')?.hasError('required')">
+            Le prénom est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>CIN</mat-label>
+        <input matInput formControlName="cin" placeholder="Entrez le CIN">
+        <mat-error *ngIf="form.get('cin')?.hasError('required')">
+            Le CIN est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="exemple@email.com">
+        <mat-error *ngIf="form.get('email')?.hasError('required')">
+            L'email est obligatoire
+        </mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email')">
+            Veuillez entrer un email valide
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Téléphone</mat-label>
+        <input matInput formControlName="telephone" placeholder="Entrez le numéro">
+        <mat-error *ngIf="form.get('telephone')?.hasError('required')">
+            Le téléphone est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Adresse</mat-label>
+        <textarea matInput formControlName="adresse" placeholder="Entrez l'adresse"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Spécialité</mat-label>
+        <input matInput formControlName="specialite" placeholder="Entrez la spécialité">
+        <mat-error *ngIf="form.get('specialite')?.hasError('required')">
+            La spécialité est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nom d'utilisateur</mat-label>
+        <input matInput formControlName="username" placeholder="Entrez le nom d'utilisateur">
+        <mat-error *ngIf="form.get('username')?.hasError('required')">
+            Le nom d'utilisateur est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Entrez le mot de passe">
+        <mat-error *ngIf="form.get('password')?.hasError('required')">
+            Le mot de passe est obligatoire
+        </mat-error>
+    </mat-form-field>
+
+    <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+            {{isEditMode ? 'Modifier' : 'Ajouter'}}
+        </button>
+        <button mat-button type="button" routerLink="/professeurs">
+            Annuler
+        </button>
+    </div>
+</form>

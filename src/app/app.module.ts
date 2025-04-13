@@ -38,6 +38,9 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 import { GroupeComponent } from './groupe/groupe.component';
 import { GroupeFormComponent } from './groupe-form/groupe-form.component';
+import { ProfesseurComponent } from './professeur/professeur.component';
+import { ProfesseurFormComponent } from './professeur-form/professeur-form.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -59,7 +62,9 @@ import { GroupeFormComponent } from './groupe-form/groupe-form.component';
     EtudiantComponent,
     EtudiantFormComponent,
     GroupeComponent,
-    GroupeFormComponent
+    GroupeFormComponent,
+    ProfesseurComponent,
+    ProfesseurFormComponent
   ],
   imports: [
     BrowserModule,
@@ -85,6 +90,7 @@ import { GroupeFormComponent } from './groupe-form/groupe-form.component';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     MatSelectModule,
+    MatButtonModule
   
   ],
   providers: [],

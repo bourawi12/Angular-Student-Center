@@ -4,8 +4,7 @@ export interface Professeur {
     prenom: string;
     telephone: string;
     adresse: string;
-    username: string;
-    password: string;
+    
     email: string;
     cin: string;
     specialite: string;

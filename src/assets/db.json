@@ -122,19 +122,53 @@
       "prenom": "mohamed2",
       "dateNaissance": "2025-04-16T23:00:00.000Z",
       "telephone": "56449598",
-      "groupeId": "GRP003"
+      "groupeId": null
     }
   ],
-  "groupes": [
+  "groupes": [],
+  "professeurs": [
     {
-      "nom": "Groupe 3",
-      "niveau": "1ère année",
-      "specialite": "Développement Web",
-      "anneeScolaire": "2024/2025",
-      "professeurPrincipal": "",
-      "capaciteMax": 20,
-      "id": "GRP003"
+      "id": null,
+      "nom": "bouaziz",
+      "prenom": "mohamed",
+      "cin": "1115",
+      "email": "mohamed12bouaziz@gmail.com",
+      "telephone": "56449590",
+      "adresse": "sfax hay ons",
+      "specialite": "dsd",
+      "coursDonnes": []
+    },
+    {
+      "nom": "bouaziz22",
+      "prenom": "mohamed22",
+      "cin": "1111",
+      "email": "mohamed12bouaziz@gmail.com",
+      "telephone": "56449590",
+      "adresse": "sfax hay ons",
+      "specialite": "aa",
+      "id": "3vzkofym0"
+    },
+    {
+      "id": "lrkuujlhl",
+      "nom": "bouaziz84",
+      "prenom": "mohamed",
+      "cin": "5151",
+      "email": "mohamed12bouaziz@gmail.com",
+      "telephone": "56449590",
+      "adresse": "sfax hay ons",
+      "specialite": "ss",
+      "coursDonnes": []
+    },
+    {
+      "id": "1g0izxenu",
+      "nom": "bouazizs",
+      "prenom": "mohameds",
+      "cin": "11111111",
+      "email": "mohamed12bouaziz@gmail.com",
+      "telephone": "56449590",
+      "adresse": "sfax hay ons",
+      "specialite": "aa",
+      "coursDonnes": []
     }
-  ],
-  "professeurs": []
+  ]
 }

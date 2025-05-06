@@ -41,8 +41,7 @@ export class ProfesseurFormComponent implements OnInit {
       telephone: ['', [Validators.required, Validators.pattern('^[0-9]{8}$')]],
       adresse: [''],
       specialite: ['', Validators.required],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      
     });
   }
 
@@ -50,17 +49,22 @@ export class ProfesseurFormComponent implements OnInit {
     if (this.form.valid) {
       const professeur: Professeur = {
         ...this.form.value,
-        id: this.isEditMode ? this.route.snapshot.params['id'] : null,
+        id: this.isEditMode ? this.route.snapshot.params['id'] : this.generateId(),
         coursDonnes: this.isEditMode ? this.form.value.coursDonnes : []
       };
-
-      const request = this.isEditMode ? 
-        this.professeurService.editProfesseur(professeur) :
-        this.professeurService.addProfesseur(professeur);
-
+  
+      const request = this.isEditMode
+        ? this.professeurService.editProfesseur(professeur)
+        : this.professeurService.addProfesseur(professeur);
+  
       request.subscribe(() => {
-        this.router.navigate(['/professeurs']);
+        this.router.navigate(['/professeur']);
       });
     }
+  }
+  
+  // Generate a unique ID (example implementation)
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9); // Generates a random string
   }
 }

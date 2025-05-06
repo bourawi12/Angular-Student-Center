@@ -50,7 +50,7 @@ const routes: Routes = [
   { path: 'create-groupe', component: GroupeFormComponent },
   { path: 'edit-groupe/:id', component: GroupeFormComponent },
   { path: 'create-professeur', component: ProfesseurFormComponent },
-  { path: 'edit-professeur/:id', component: EtudiantFormComponent },
+  { path: 'edit-professeur/:id', component: ProfesseurFormComponent },
   {
     path:'**',// nimporte quel path
     component:MemberComponent

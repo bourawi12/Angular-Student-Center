@@ -55,27 +55,13 @@
         </mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-        <mat-label>Nom d'utilisateur</mat-label>
-        <input matInput formControlName="username" placeholder="Entrez le nom d'utilisateur">
-        <mat-error *ngIf="form.get('username')?.hasError('required')">
-            Le nom d'utilisateur est obligatoire
-        </mat-error>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-        <mat-label>Mot de passe</mat-label>
-        <input matInput type="password" formControlName="password" placeholder="Entrez le mot de passe">
-        <mat-error *ngIf="form.get('password')?.hasError('required')">
-            Le mot de passe est obligatoire
-        </mat-error>
-    </mat-form-field>
+   
 
     <div class="form-actions">
-        <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+        <button mat-raised-button color="primary" type="submit  "  >
             {{isEditMode ? 'Modifier' : 'Ajouter'}}
         </button>
-        <button mat-button type="button" routerLink="/professeurs">
+        <button mat-button type="button" routerLink="/professeur">
             Annuler
         </button>
     </div>

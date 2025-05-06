@@ -92,7 +92,7 @@ import { MatButtonModule } from '@angular/material/button';
     AngularFireAuthModule,
     MatSelectModule,
     MatButtonModule,
-    NgChartsModule
+    
   
   ],
   providers: [],

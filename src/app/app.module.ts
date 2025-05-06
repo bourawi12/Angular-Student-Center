@@ -45,6 +45,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,7 +91,8 @@ import { MatButtonModule } from '@angular/material/button';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    NgChartsModule
   
   ],
   providers: [],

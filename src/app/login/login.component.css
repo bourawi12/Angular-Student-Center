@@ -1,0 +1,31 @@
+/* Apply to your global styles.css or component-specific .css file */
+
+form {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: none;
+  }
+  
+  @media (max-width: 480px) {
+    form {
+      margin: 50px 1rem;
+      padding: 1.5rem;
+    }
+  }
+  
